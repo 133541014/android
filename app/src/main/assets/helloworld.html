@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js调用Android</title>
+
+    <script>
+        function getData(){
+            var result = android.getData();
+            alert(result);
+        }
+        function showConfirm(){
+            confirm(navigator.userAgent);
+
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Toast提示" onclick="android.showToast('曹神前来日狗~');"/>
+    <input type="button" value="列表对话框" onclick="android.showDialog();"/>
+    <input type="button" value="获取返回数据" onclick="getData();"/>
+    <input type="button" value="弹出确认框" onclick="showConfirm();"/>
+</body>
+</html>
